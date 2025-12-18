@@ -62,6 +62,14 @@ header {
     width: 100%;
 }
 
+body.dark-mode .menu-link:hover {
+    color: var(--pale-lavender);
+}
+
+body.dark-mode .menu-link::after{
+    background-color: var(--pale-lavender);
+}
+
 /* Theme Switch */
 .theme-switch {
     display: flex;
