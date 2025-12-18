@@ -119,11 +119,11 @@ body.dark-mode .timeline-card {
 
 @media screen and (max-width: 480px) {
     .timeline {
-        padding-left: 1rem;
+        padding-left: 0;
     }
     
     .timeline::before {
-        left: 35px;
+        left: 19px;
     }
     
     experience-item {
@@ -131,6 +131,6 @@ body.dark-mode .timeline-card {
     }
 
     .timeline-dot {
-        left: -6px;
+        left: 10px;
     }
 }
