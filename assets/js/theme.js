@@ -8,6 +8,7 @@ export function initTheme() {
         body.classList.add(currentTheme);
         if (currentTheme === 'dark-mode') {
             toggleSwitch.checked = true;
+            imageLogo.src = './assets/images/logo-dark.svg';
         }
     }
 
