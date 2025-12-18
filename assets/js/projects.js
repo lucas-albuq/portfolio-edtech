@@ -87,7 +87,7 @@ const projectsList = [
     {
         title: "This Portfólio",
         description: "A portfolio website created to showcase my skills and projects.",
-        skills: ["Javascript", "HTML", "CSS", "Figma"],
+        skills: ["Javascript", "HTML", "CSS"],
         image: "./assets/images/portfolio.png",
         url: "https://github.com/lucas-albuq/portfolio-edtech"
     },

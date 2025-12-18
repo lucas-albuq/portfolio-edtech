@@ -1,0 +1,135 @@
+/* Experience Section */
+.experience {
+    padding: 2rem 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 3rem auto 0;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 29px; 
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-image: linear-gradient(to bottom, var(--deep-indigo) 50%, transparent 50%);
+    background-size: 2px 15px;  
+    background-repeat: repeat-y;
+}
+
+experience-item {
+    display: block;
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 3rem; 
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 20px; 
+    left: -12px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--deep-indigo);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 0 4px var(--bg-color);  
+}
+
+.timeline-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.timeline-date {
+    display: inline-block;
+    background-color: var(--deep-indigo);
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.timeline-card {
+    background-color: rgba(92, 39, 237, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode .timeline-card {
+    background-color: rgba(61, 33, 139, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.timeline-card:hover {
+    transform: translateX(5px);
+}
+
+.timeline-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.timeline-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.experience .section-title {
+    display: block;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.experience .section-title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    height: 4px;
+    width: 60px;
+    background-color: var(--electric-violet);
+    border-radius: 4px;
+}
+
+.experience .section-title::before {
+    display: none;
+}
+
+
+@media screen and (max-width: 480px) {
+    .timeline {
+        padding-left: 1rem;
+    }
+    
+    .timeline::before {
+        left: 35px;
+    }
+    
+    experience-item {
+        padding-left: 2.5rem;
+    }
+
+    .timeline-dot {
+        left: -6px;
+    }
+}
