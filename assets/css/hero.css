@@ -268,10 +268,6 @@ body.dark-mode .card-header{
     .hero-content{
         align-items: flex-start;
     }
-    
-    .hero-content h1 {
-        font-size: 2rem;
-    }
 
     .hero-content p{
         max-width: 100%;
