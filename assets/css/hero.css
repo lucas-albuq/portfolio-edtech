@@ -27,6 +27,16 @@
     display: block; 
 }
 
+body.dark-mode .hero-content .highlight{
+    background: linear-gradient(90deg, #00D2A4, #69ffde);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: block; 
+}
+
+
 .hero-content .highlight-purple {
     background: linear-gradient(90deg, var(--deep-indigo), var(--electric-violet));
     -webkit-background-clip: text;
@@ -35,6 +45,16 @@
     color: transparent;
     display: block;
 }
+
+body.dark-mode .hero-content .highlight-purple{
+    background: linear-gradient(90deg, var(--electric-violet), var(--pale-lavender));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: block;
+}
+
 
 .sliding-text-container {
     display: inline-block;
@@ -107,6 +127,10 @@
     font-weight: 300;
     display: inline-block;
     margin-bottom: 0.8rem;
+}
+
+body.dark-mode .card-header{
+    color: var(--pale-lavender);
 }
 
 .card-header, .card-body{
