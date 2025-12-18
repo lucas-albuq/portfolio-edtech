@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import "./header.css";
+@import "./hero.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+}
+
+:root {
+    --dark-gunmetal: #232129;
+    --deep-indigo: #3d218b;
+    --electric-violet: #5c27ed;
+    --pale-lavender: #b89eff;
+    --ghost-white: #f8f7fc;
+    --white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    
+    --bg-color: var(--ghost-white);
+    --text-color: var(--dark-gunmetal);
+    --text-secondary: #555;
+    --card-bg: #fff;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --primary-gradient: linear-gradient(135deg, var(--deep-indigo) 0%, var(--electric-violet) 100%);
+}
+
+body.dark-mode {
+    --bg-color: var(--dark-gunmetal);
+    --text-color: var(--ghost-white);
+    --text-secondary: #aaa;
+    --card-bg: #2a2830;
+    --glass-bg: rgba(30, 30, 40, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.background-blobs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.background-blobs::before,
+.background-blobs::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+}
+
+.background-blobs::before {
+    top: -10%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--pale-lavender), var(--electric-violet));
+}
+
+.background-blobs::after {
+    bottom: 0%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--electric-violet), var(--deep-indigo));
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, var(--deep-indigo), var(--electric-violet), var(--pale-lavender));
+    background-size: 200% auto;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.2s, background-position 0.5s;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+}
+
+.btn-primary.small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--deep-indigo);
+    color: var(--white);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    position: relative;
+    display: inline-block;
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 6rem 2rem 2rem;
+}
+
+section {
+    margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .background-blobs::before {
+        top: -15%;
+        right: -5%;
+        width: 400px;
+        height: 400px;
+    }
+    
+    .background-blobs::after {
+        bottom: 0%;
+        left: -5%;
+        width: 300px;
+        height: 300px;
+    }
+}
