@@ -4,6 +4,7 @@
 @import "./about.css";
 @import "./skills.css";
 @import "./projects.css";
+@import "./experience.css";
 
 * {
     margin: 0;
