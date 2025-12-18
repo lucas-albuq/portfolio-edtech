@@ -2,6 +2,7 @@
 @import "./header.css";
 @import "./hero.css";
 @import "./about.css";
+@import "./skills.css";
 
 * {
     margin: 0;

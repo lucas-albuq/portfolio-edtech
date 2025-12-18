@@ -1,0 +1,110 @@
+.skills {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.skills .section-title {
+    display: inline-block;
+    padding-left: 0;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.skills .section-title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    height: 4px;
+    width: 60px;
+    background-color: var(--electric-violet);
+    border-radius: 4px;
+    top: auto;
+}
+
+.skills .section-title::before {
+    display: none;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-item {
+    width: 80px;
+    height: 80px;
+    background-color: var(--electric-violet);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 2.5rem;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px -5px rgba(92, 39, 237, 0.4);
+    position: relative;
+    cursor: pointer;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px) scale(1.1);
+    background-color: var(--deep-indigo);
+}
+
+.skill-item::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background-color: var(--dark-gunmetal);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.skill-item::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px);
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--dark-gunmetal) transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover::before,
+.skill-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-15px); /* Move tooltip slightly up on hover */
+}
+
+.skill-item:hover::after {
+    transform: translateX(-50%) translateY(-5px); /* Keep arrow connected */
+}
+
+@media screen and (max-width: 768px) {
+    .skill-item {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+}
