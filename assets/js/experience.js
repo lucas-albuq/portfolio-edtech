@@ -1,16 +1,4 @@
-export class ExperienceItem extends HTMLElement {
-    constructor() {
-        super();
-    }
-
-    set data(value) {
-        this._data = value;
-        this.render();
-    }
-
-    get data() {
-        return this._data;
-    }
+ 
 
     connectedCallback() {
         this.render();
