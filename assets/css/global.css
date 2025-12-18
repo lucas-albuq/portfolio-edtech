@@ -5,6 +5,7 @@
 @import "./skills.css";
 @import "./projects.css";
 @import "./experience.css";
+@import "./footer.css"; 
 
 * {
     margin: 0;
