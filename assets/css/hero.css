@@ -47,7 +47,7 @@ body.dark-mode .hero-content .highlight{
 }
 
 body.dark-mode .hero-content .highlight-purple{
-    background: linear-gradient(90deg, var(--electric-violet), var(--pale-lavender));
+    background: linear-gradient(90deg, var(--pale-lavender), var(--pale-lavender));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
