@@ -139,3 +139,19 @@ main {
 section {
     margin-bottom: 6rem;
 }
+
+@media screen and (max-width: 1024px) {
+    .background-blobs::before {
+        top: -15%;
+        right: -5%;
+        width: 400px;
+        height: 400px;
+    }
+    
+    .background-blobs::after {
+        bottom: 0%;
+        left: -5%;
+        width: 300px;
+        height: 300px;
+    }
+}
